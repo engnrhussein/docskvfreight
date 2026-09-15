@@ -385,7 +385,7 @@
                 </div>
             </div>
 
-            <a href="#" id="downloadLink" class="btn-download" target="_blank">
+            <a href="#" id="downloadLink" class="btn-download" download="DOC-2024-GDA01.pdf" target="_blank">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download Official PDF
             </a>
@@ -419,7 +419,7 @@
         // Official Database of Issued Documents
         const documents = {
             "DOC-2024-GDA01": {
-                name: "Gallad Dahir Ali",
+                name: "Dahir Ali Barre",
                 date: "September 15, 2026",
                 file: "/DOC-2024-GDA01.pdf"
             }
@@ -464,6 +464,7 @@
                     document.getElementById('valDocId').textContent = cleanId;
                     document.getElementById('valDate').textContent = doc.date;
                     document.getElementById('downloadLink').href = doc.file;
+                    document.getElementById('downloadLink').setAttribute('download', cleanId + '.pdf');
                     document.getElementById('validState').classList.remove('hidden');
                 } else {
                     document.getElementById('invalidDocIdDisplay').textContent = cleanId || "(empty)";
