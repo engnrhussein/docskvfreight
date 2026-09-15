@@ -75,46 +75,26 @@
 
         .doc-link-item {
             display: block;
-            padding: 1.5rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 1rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-color);
             text-decoration: none;
             color: var(--text-main);
-            transition: all 0.2s ease;
-            background: white;
-            position: relative;
+            transition: padding-left 0.2s;
         }
 
         .doc-link-item:last-child {
-            margin-bottom: 0;
+            border-bottom: none;
         }
 
         .doc-link-item:hover {
-            border-color: var(--navy);
-            box-shadow: 0 4px 12px rgba(11, 35, 71, 0.08);
-            transform: translateY(-2px);
+            padding-left: 0.5rem;
         }
 
         .doc-link-item h2 {
             font-size: 1.15rem;
             color: var(--navy);
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 0.25rem 0;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .doc-link-item h2::after {
-            content: '→';
-            color: var(--text-muted);
-            transition: color 0.2s ease, transform 0.2s ease;
-        }
-
-        .doc-link-item:hover h2::after {
-            color: var(--orange);
-            transform: translateX(4px);
         }
 
         .doc-link-item p {
