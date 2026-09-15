@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - KV Freight LLC</title>
+    <meta name="description" content="Official Privacy Policy of KV Freight LLC. Learn how we collect, protect, and manage logistics and personal data across our nationwide freight operations.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --navy: #0B2347;
+            --navy-light: #163666;
+            --orange: #FD5E01;
+            --bg-color: #F8F9FA;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border-color: #E2E8F0;
+            --card-bg: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--navy);
+            padding: 1.25rem 2rem;
+            border-bottom: 4px solid var(--orange);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-link img {
+            height: 42px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #E2E8F0;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        .btn-nav-portal {
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.45rem 0.9rem;
+            border-radius: 6px;
+            color: white;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s;
+        }
+
+        .btn-nav-portal:hover {
+            border-color: var(--orange);
+            background-color: rgba(253, 94, 1, 0.15);
+            color: white;
+        }
+
+        /* Hero / Document Banner */
+        .doc-banner {
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            padding: 3rem 1.5rem 2.5rem 1.5rem;
+        }
+
+        .doc-banner-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(11, 35, 71, 0.08);
+            color: var(--navy);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            font-size: 2.25rem;
+            margin: 0 0 0.75rem 0;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .doc-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .doc-meta-item strong {
+            color: var(--navy);
+        }
+
+        /* Content Layout */
+        main {
+            flex-grow: 1;
+            padding: 3rem 1.5rem;
+        }
+
+        .doc-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            box-sizing: border-box;
+        }
+
+        /* Table of Contents */
+        .toc-box {
+            background-color: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--orange);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .toc-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 0 0 0.75rem 0;
+        }
+
+        .toc-list {
+            margin: 0;
+            padding-left: 1.25rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.4rem 1.5rem;
+        }
+
+        .toc-list li a {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .toc-list li a:hover {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+
+        /* Document Typography */
+        section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 6rem;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy-light);
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        p {
+            margin: 0 0 1rem 0;
+            font-size: 0.975rem;
+            color: #334155;
+        }
+
+        ul, ol {
+            margin: 0 0 1.25rem 0;
+            padding-left: 1.5rem;
+            color: #334155;
+            font-size: 0.975rem;
+        }
+
+        li {
+            margin-bottom: 0.45rem;
+        }
+
+        strong {
+            color: var(--navy);
+        }
+
+        .highlight-card {
+            background-color: #F1F5F9;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--navy);
+            font-size: 0.925rem;
+        }
+
+        .contact-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: white;
+            border-top: 1px solid var(--border-color);
+            padding: 2.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--navy);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .doc-container {
+                padding: 2rem 1.25rem;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="https://kvfreight.com" class="logo-link">
+                <img src="/logo.png" alt="KV Freight LLC">
+            </a>
+            <nav>
+                <a href="https://kvfreight.com">Home</a>
+                <a href="/verify/">Document Verification</a>
+                <a href="/privacy/" class="active">Privacy Policy</a>
+                <a href="/terms/">Terms of Service</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="doc-banner">
+        <div class="doc-banner-inner">
+            <span class="badge-tag">Corporate Governance</span>
+            <h1>Privacy Policy</h1>
+            <p style="color: var(--text-muted); margin: 0; font-size: 1.05rem;">
+                How KV Freight LLC collects, handles, safeguards, and protects your information across our nationwide freight and digital logistics systems.
+            </p>
+            <div class="doc-meta">
+                <div class="doc-meta-item"><strong>Effective Date:</strong> September 15, 2026</div>
+                <div class="doc-meta-item"><strong>Last Updated:</strong> September 15, 2026</div>
+                <div class="doc-meta-item"><strong>Entity:</strong> KV Freight LLC (Blaine, MN)</div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="doc-container">
+
+            <div class="toc-box">
+                <div class="toc-title">Table of Contents</div>
+                <ol class="toc-list">
+                    <li><a href="#section-1">1. Introduction & Scope</a></li>
+                    <li><a href="#section-2">2. Information We Collect</a></li>
+                    <li><a href="#section-3">3. How We Use Your Information</a></li>
+                    <li><a href="#section-4">4. Carrier & Telematics Data</a></li>
+                    <li><a href="#section-5">5. SMS & Electronic Communications</a></li>
+                    <li><a href="#section-6">6. Information Sharing & Disclosure</a></li>
+                    <li><a href="#section-7">7. Document Verification & Security</a></li>
+                    <li><a href="#section-8">8. Data Retention Policy</a></li>
+                    <li><a href="#section-9">9. Your Privacy Rights</a></li>
+                    <li><a href="#section-10">10. Contact & Privacy Officer</a></li>
+                </ol>
+            </div>
+
+            <section id="section-1">
+                <h2>1. Introduction & Scope</h2>
+                <p>
+                    KV Freight LLC ("<strong>KV Freight</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>") is committed to safeguarding the privacy of our customers, shippers, freight brokers, motor carriers, drivers, and website visitors. This Privacy Policy governs the manner in which KV Freight collects, uses, maintains, and discloses information gathered through our public website (<a href="https://kvfreight.com" target="_blank" rel="noopener">kvfreight.com</a>), our document verification portal (<a href="https://docs.kvfreight.com">docs.kvfreight.com</a>), electronic dispatch communications, and day-to-day freight operations across the continental United States.
+                </p>
+                <p>
+                    By engaging our transportation services, tendering freight, hauling shipments, or using our websites and portals, you acknowledge and agree to the practices described in this Privacy Policy.
+                </p>
+            </section>
+
+            <section id="section-2">
+                <h2>2. Information We Collect</h2>
+                <p>
+                    Depending on your relationship with KV Freight (e.g., shipper, carrier, employee, or website visitor), we may collect the following categories of information:
+                </p>
+                <h3>A. Contact & Business Identifiers</h3>
+                <ul>
+                    <li>Full legal names, corporate business names, and job titles.</li>
+                    <li>Commercial physical addresses, billing addresses, and delivery facilities.</li>
+                    <li>Email addresses, telephone numbers, and dispatch direct-lines.</li>
+                    <li>Federal Motor Carrier Safety Administration (FMCSA) identifiers, including USDOT numbers, MC/FF numbers, and Federal Taxpayer ID (EIN).</li>
+                </ul>
+
+                <h3>B. Shipment, Freight & Logistics Data</h3>
+                <ul>
+                    <li>Bills of Lading (BOL), Rate Confirmations, and Proof of Delivery (POD) documents.</li>
+                    <li>Origin and destination facilities, appointment times, and handling requirements.</li>
+                    <li>Cargo descriptions, commodity classifications, gross weights, and freight valuations.</li>
+                </ul>
+
+                <h3>C. Carrier & Driver Compliance Records</h3>
+                <ul>
+                    <li>Commercial Driver's License (CDL) numbers and issuing jurisdictions.</li>
+                    <li>Certificates of Insurance (COI) verifying Auto Liability and Cargo Insurance coverage.</li>
+                    <li>FMCSA safety ratings and authority status verifications.</li>
+                </ul>
+
+                <h3>D. Technical & Browsing Data</h3>
+                <ul>
+                    <li>Internet Protocol (IP) addresses, browser user-agent strings, and operating system details.</li>
+                    <li>Document verification lookup queries, request timestamps, and referrer headers.</li>
+                </ul>
+            </section>
+
+            <section id="section-3">
+                <h2>3. How We Use Your Information</h2>
+                <p>
+                    KV Freight uses collected data strictly for legitimate logistics, regulatory, and corporate purposes, including:
+                </p>
+                <ul>
+                    <li><strong>Executing Freight Operations:</strong> Dispatching equipment, tracking transit progress, coordinating pick-up and delivery, and resolving transit disruptions.</li>
+                    <li><strong>Invoicing & Accounting:</strong> Processing rate confirmations, issuing freight invoices, issuing carrier settlements, and managing accounts payable/receivable.</li>
+                    <li><strong>Regulatory Compliance:</strong> Fulfilling statutory requirements mandated by the US Department of Transportation (DOT), FMCSA, and state commercial motor vehicle authorities.</li>
+                    <li><strong>Document Verification & Fraud Prevention:</strong> Operating our cryptographic verification portal (<code>docs.kvfreight.com</code>) to authenticate official corporate documents, employment verifications, and prevent document falsification.</li>
+                    <li><strong>Operational Improvements:</strong> Analyzing lanes, transit efficiency, and logistics systems to deliver superior freight reliability.</li>
+                </ul>
+            </section>
+
+            <section id="section-4">
+                <h2>4. Carrier, Equipment & Telematics Data</h2>
+                <p>
+                    When motor carriers transport freight on behalf of or in coordination with KV Freight LLC, we may receive or process electronic logging device (ELD) telematics, automated check-calls, and GPS geolocation updates for the duration of transit:
+                </p>
+                <ul>
+                    <li>Tracking is conducted strictly between scheduled pick-up and completed delivery.</li>
+                    <li>Location updates are shared solely with authorized shippers and receivers monitoring the consignment.</li>
+                    <li>We do not retain continuous real-time driver tracking data beyond the resolution of the shipment transit lifecycle.</li>
+                </ul>
+            </section>
+
+            <section id="section-5">
+                <h2>5. SMS & Electronic Communications</h2>
+                <p>
+                    KV Freight may send automated or manual SMS text messages and email notifications regarding load dispatches, shipment tracking updates, appointment confirmations, or document verifications:
+                </p>
+                <div class="highlight-card">
+                    <strong>SMS Consent Policy:</strong><br>
+                    Mobile phone numbers collected for shipment coordination, driver dispatch, or corporate verification are never shared or sold to third-party marketers. You may reply <strong>STOP</strong> at any time to cancel SMS communications or <strong>HELP</strong> for assistance. Standard message and data rates may apply.
+                </div>
+            </section>
+
+            <section id="section-6">
+                <h2>6. Information Sharing & Disclosure</h2>
+                <p>
+                    We value your trust and <strong>do not sell, rent, or trade your personal or commercial data to third-party data brokers</strong>. Information is disclosed solely in the following operational circumstances:
+                </p>
+                <ul>
+                    <li><strong>Logistics Partners:</strong> Sharing essential consignment details (consignee address, appointment time, commodity type) with designated carriers, drivers, and warehouse facilities to accomplish freight delivery.</li>
+                    <li><strong>Service Providers:</strong> Trusted third-party technology providers, cloud infrastructure hosts (e.g., Cloudflare), and banking institutions assisting in corporate operations under strict confidentiality obligations.</li>
+                    <li><strong>Legal & Regulatory Mandates:</strong> Where required by federal or state law, subpoena, court order, or FMCSA audit to disclose records to authorized governmental bodies.</li>
+                    <li><strong>Protection of Rights:</strong> Enforcing our agreements, resolving cargo claims, or investigating suspected fraudulent document alteration.</li>
+                </ul>
+            </section>
+
+            <section id="section-7">
+                <h2>7. Document Verification & Security</h2>
+                <p>
+                    KV Freight implements enterprise-grade technical and organizational safeguards to preserve the confidentiality and integrity of all records:
+                </p>
+                <ul>
+                    <li><strong>Cryptographic PDF Signatures:</strong> Official letters and verifications issued by KV Freight are signed with an internal X.509 cryptographic digital certificate (PAdES standard), rendering unauthorized modifications immediately detectable.</li>
+                    <li><strong>Public Control ID System:</strong> When scanning a document QR code or entering a Document Control ID at <code>docs.kvfreight.com/verify</code>, our server cross-references our authenticated database and serves only verified records.</li>
+                    <li><strong>Transport Encryption:</strong> All website traffic, API interactions, and document portals are encrypted end-to-end via TLS 1.3 encryption.</li>
+                </ul>
+            </section>
+
+            <section id="section-8">
+                <h2>8. Data Retention Policy</h2>
+                <p>
+                    KV Freight retains logistics records, bills of lading, and freight billing documents in accordance with federal commercial record-keeping regulations (typically 3 to 7 years depending on DOT, tax, and interstate commerce statutory guidelines). Once the mandatory retention window has elapsed, electronic records are securely expunged or anonymized.
+                </p>
+            </section>
+
+            <section id="section-9">
+                <h2>9. Your Privacy Rights</h2>
+                <p>
+                    Depending on your state of residence (including California, Minnesota, and others with active privacy statutes), you may be entitled to:
+                </p>
+                <ul>
+                    <li><strong>Right to Know / Access:</strong> Request confirmation of what personal information KV Freight holds concerning you.</li>
+                    <li><strong>Right to Rectification:</strong> Request correction of inaccurate personal or company data in our active systems.</li>
+                    <li><strong>Right to Deletion:</strong> Request deletion of your personal data, subject to statutory logistics, accounting, and FMCSA record-retention requirements.</li>
+                </ul>
+                <p>
+                    To exercise any of these rights, please contact our Privacy Department using the details below.
+                </p>
+            </section>
+
+            <section id="section-10">
+                <h2>10. Contact & Privacy Officer</h2>
+                <p>
+                    If you have questions, feedback, or requests regarding this Privacy Policy or KV Freight's data handling practices, please direct your inquiry to our corporate headquarters:
+                </p>
+                <div class="contact-card">
+                    <strong>KV Freight LLC — Corporate Compliance</strong><br>
+                    12202 Opal Street NE<br>
+                    Blaine, MN 55449<br>
+                    United States<br><br>
+                    <strong>Phone:</strong> 612-454-7193<br>
+                    <strong>Corporate Email:</strong> <a href="mailto:contact@kvfreight.com">contact@kvfreight.com</a><br>
+                    <strong>Official Portals:</strong> <a href="https://kvfreight.com">kvfreight.com</a> | <a href="https://docs.kvfreight.com">docs.kvfreight.com</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="https://kvfreight.com">Main Website</a>
+                <a href="/verify/">Document Verification</a>
+                <a href="/privacy/">Privacy Policy</a>
+                <a href="/terms/">Terms of Service</a>
+            </div>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> KV Freight LLC. All rights reserved. <br>12202 Opal Street NE, Blaine, MN 55449</p>
+        </div>
+    </footer>
+
+</body>
+</html>

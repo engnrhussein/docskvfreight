@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - KV Freight LLC</title>
+    <meta name="description" content="Official Terms of Service and Freight Transportation Agreement for KV Freight LLC. Governing all logistics, brokerage, dispatch, and document verification services.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --navy: #0B2347;
+            --navy-light: #163666;
+            --orange: #FD5E01;
+            --bg-color: #F8F9FA;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border-color: #E2E8F0;
+            --card-bg: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--navy);
+            padding: 1.25rem 2rem;
+            border-bottom: 4px solid var(--orange);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-link img {
+            height: 42px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #E2E8F0;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        /* Hero / Document Banner */
+        .doc-banner {
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            padding: 3rem 1.5rem 2.5rem 1.5rem;
+        }
+
+        .doc-banner-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(11, 35, 71, 0.08);
+            color: var(--navy);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            font-size: 2.25rem;
+            margin: 0 0 0.75rem 0;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .doc-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .doc-meta-item strong {
+            color: var(--navy);
+        }
+
+        /* Content Layout */
+        main {
+            flex-grow: 1;
+            padding: 3rem 1.5rem;
+        }
+
+        .doc-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            box-sizing: border-box;
+        }
+
+        /* Table of Contents */
+        .toc-box {
+            background-color: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--orange);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .toc-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 0 0 0.75rem 0;
+        }
+
+        .toc-list {
+            margin: 0;
+            padding-left: 1.25rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.4rem 1.5rem;
+        }
+
+        .toc-list li a {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .toc-list li a:hover {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+
+        /* Document Typography */
+        section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 6rem;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy-light);
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        p {
+            margin: 0 0 1rem 0;
+            font-size: 0.975rem;
+            color: #334155;
+        }
+
+        ul, ol {
+            margin: 0 0 1.25rem 0;
+            padding-left: 1.5rem;
+            color: #334155;
+            font-size: 0.975rem;
+        }
+
+        li {
+            margin-bottom: 0.45rem;
+        }
+
+        strong {
+            color: var(--navy);
+        }
+
+        .highlight-card {
+            background-color: #F1F5F9;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--navy);
+            font-size: 0.925rem;
+        }
+
+        .alert-card {
+            background-color: #FFF7ED;
+            border: 1px solid #FFEDD5;
+            border-left: 4px solid var(--orange);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.925rem;
+            color: #9A3412;
+        }
+
+        .contact-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: white;
+            border-top: 1px solid var(--border-color);
+            padding: 2.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--navy);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .doc-container {
+                padding: 2rem 1.25rem;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="https://kvfreight.com" class="logo-link">
+                <img src="/logo.png" alt="KV Freight LLC">
+            </a>
+            <nav>
+                <a href="https://kvfreight.com">Home</a>
+                <a href="/verify/">Document Verification</a>
+                <a href="/privacy/">Privacy Policy</a>
+                <a href="/terms/" class="active">Terms of Service</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="doc-banner">
+        <div class="doc-banner-inner">
+            <span class="badge-tag">Legal Terms & Conditions</span>
+            <h1>Terms of Service</h1>
+            <p style="color: var(--text-muted); margin: 0; font-size: 1.05rem;">
+                General Terms and Conditions governing commercial freight transportation, brokerage dispatch, document authentication, and digital services provided by KV Freight LLC.
+            </p>
+            <div class="doc-meta">
+                <div class="doc-meta-item"><strong>Effective Date:</strong> September 15, 2026</div>
+                <div class="doc-meta-item"><strong>Last Updated:</strong> September 15, 2026</div>
+                <div class="doc-meta-item"><strong>Jurisdiction:</strong> State of Minnesota, USA</div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="doc-container">
+
+            <div class="toc-box">
+                <div class="toc-title">Table of Contents</div>
+                <ol class="toc-list">
+                    <li><a href="#section-1">1. Acceptance of Terms</a></li>
+                    <li><a href="#section-2">2. Description of Services</a></li>
+                    <li><a href="#section-3">3. Shipper Warranties & Load Tenders</a></li>
+                    <li><a href="#section-4">4. Motor Carrier & Driver Requirements</a></li>
+                    <li><a href="#section-5">5. Rates, Billing & Accessorial Charges</a></li>
+                    <li><a href="#section-6">6. Cargo Loss, Damage & Carmack Liability</a></li>
+                    <li><a href="#section-7">7. Document Verification & Legal Authenticity</a></li>
+                    <li><a href="#section-8">8. Intellectual Property & Brand Rights</a></li>
+                    <li><a href="#section-9">9. Disclaimer of Warranties</a></li>
+                    <li><a href="#section-10">10. Limitation of Liability & Indemnification</a></li>
+                    <li><a href="#section-11">11. Governing Law & Dispute Resolution</a></li>
+                    <li><a href="#section-12">12. Corporate Contact Information</a></li>
+                </ol>
+            </div>
+
+            <section id="section-1">
+                <h2>1. Acceptance of Terms</h2>
+                <p>
+                    These Terms of Service ("<strong>Terms</strong>") constitute a legally binding agreement between you ("<strong>Customer</strong>", "<strong>Shipper</strong>", "<strong>Carrier</strong>", or "<strong>User</strong>") and <strong>KV Freight LLC</strong> ("<strong>KV Freight</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>"), an active commercial freight logistics and transportation entity organized under the laws of the State of Minnesota.
+                </p>
+                <p>
+                    By tendering freight to KV Freight, executing a Rate Confirmation, transporting shipments dispatched by us, or using our websites (<a href="https://kvfreight.com">kvfreight.com</a>) and document verification portals (<a href="https://docs.kvfreight.com">docs.kvfreight.com</a>), you expressly agree to be bound by these Terms. If you are entering into these Terms on behalf of a corporation, partnership, or other legal entity, you represent and warrant that you possess full legal authority to bind that entity.
+                </p>
+            </section>
+
+            <section id="section-2">
+                <h2>2. Description of Services</h2>
+                <p>
+                    KV Freight provides comprehensive nationwide logistics, dry van, reefer, flatbed freight transportation, carrier dispatch, and supply chain management across the continental United States. Our services encompass direct commercial motor carriage and licensed freight arrangement under active USDOT and FMCSA operating authority.
+                </p>
+            </section>
+
+            <section id="section-3">
+                <h2>3. Shipper Warranties & Load Tenders</h2>
+                <p>
+                    When tendering freight to KV Freight, Shippers and Customers agree to and warrant the following:
+                </p>
+                <ul>
+                    <li><strong>Accurate Cargo Disclosure:</strong> All cargo descriptions, piece counts, pallet dimensions, gross weights, and handling specifications provided on bills of lading or tender requests must be accurate, complete, and fully disclosed.</li>
+                    <li><strong>Packaging & Loading:</strong> Cargo must be properly packaged, palletized, crated, blocked, and braced in accordance with National Motor Freight Traffic Association (NMFTA) standards to withstand normal transit stresses.</li>
+                    <li><strong>Hazardous Materials:</strong> Hazardous materials (HAZMAT) under 49 CFR regulations may NOT be tendered without prior written authorization, proper shipping papers, placarding notices, and emergency response contact info.</li>
+                    <li><strong>Legal Compliance:</strong> Cargo tendered must not violate any federal, state, or municipal laws, contraband prohibitions, or trade restrictions.</li>
+                </ul>
+            </section>
+
+            <section id="section-4">
+                <h2>4. Motor Carrier & Driver Requirements</h2>
+                <p>
+                    Motor carriers operating in partnership or under dispatch with KV Freight must maintain:
+                </p>
+                <ul>
+                    <li><strong>Active Operating Authority:</strong> Continuous, active common or contract carrier authority with the Federal Motor Carrier Safety Administration (FMCSA) with a safety rating of "Satisfactory" or "Unrated".</li>
+                    <li><strong>Insurance Requirements:</strong> Minimum coverage of $1,000,000 in Auto Liability and $100,000 in Cargo Liability from an insurance provider rated A- or better by A.M. Best, naming KV Freight LLC as a certificate holder.</li>
+                    <li><strong>Equipment Integrity:</strong> Clean, dry, odor-free, and roadworthy commercial motor equipment meeting all DOT safety inspection standards.</li>
+                    <li><strong>No Double Brokering:</strong> Re-brokering, trip-leasing, or unauthorized subcontracting of any shipment dispatched by KV Freight without prior written consent is strictly prohibited and constitutes a material breach resulting in immediate rate forfeiture.</li>
+                </ul>
+            </section>
+
+            <section id="section-5">
+                <h2>5. Rates, Billing & Accessorial Charges</h2>
+                <p>
+                    All freight charges are established via mutually agreed Rate Confirmations:
+                </p>
+                <ul>
+                    <li><strong>Standard Payment Terms:</strong> Invoices are payable upon receipt or under approved commercial credit terms (e.g., Net 30 days). Undisputed balances outstanding beyond agreed terms are subject to late fees of 1.5% per month or the highest rate permitted by law.</li>
+                    <li><strong>Detention & Layover:</strong> Standard driver detention commences after two (2) hours of free loading or unloading time, provided the vehicle arrived at the confirmed appointment time and the driver provided timely notification.</li>
+                    <li><strong>Accessorial Charges:</strong> Additional fees (including driver assist, TONU / truck-order-not-used, stop-offs, reconsignment, or pallet exchange) must be verified and confirmed in writing.</li>
+                </ul>
+            </section>
+
+            <section id="section-6">
+                <h2>6. Cargo Loss, Damage & Carmack Liability</h2>
+                <p>
+                    Liability for freight loss, damage, or delay during interstate transit is governed by the Carmack Amendment, 49 U.S.C. &sect; 14706, and the terms set forth herein:
+                </p>
+                <div class="alert-card">
+                    <strong>Claim Filing Deadlines:</strong><br>
+                    All cargo claims must be filed in writing with KV Freight within nine (9) months of the delivery date (or nine months from the scheduled delivery date in the event of non-delivery). Formal legal action on cargo claims must be commenced within two (2) years from the date written notice of disallowance is issued.
+                </div>
+                <p>
+                    Neither KV Freight nor its operating carriers shall be liable for loss, damage, or delay caused by an Act of God, the public enemy, acts of public authorities, inherent vice of the goods, or acts or omissions of the shipper.
+                </p>
+            </section>
+
+            <section id="section-7">
+                <h2>7. Document Verification & Legal Authenticity</h2>
+                <p>
+                    KV Freight operates an authoritative online document verification platform located at <a href="https://docs.kvfreight.com">docs.kvfreight.com</a>:
+                </p>
+                <ul>
+                    <li><strong>Official Verification:</strong> Official records, employment verifications, and corporate authorizations issued by KV Freight are assigned unique Document Control IDs, cryptographic barcodes, scannable QR codes, and embedded X.509 digital signatures.</li>
+                    <li><strong>Prohibition of Falsification:</strong> Any attempt to alter, forge, modify, simulate, or falsify any document, letterhead, rate sheet, or bill of lading bearing KV Freight's name, logo, or Document Control ID is strictly illegal and will be prosecuted under state and federal fraud statutes.</li>
+                    <li><strong>Verification Authority:</strong> Only documents validated through <code>docs.kvfreight.com/verify</code> or signed with KV Freight's registered cryptographic root certificate constitute genuine, binding statements of the company.</li>
+                </ul>
+            </section>
+
+            <section id="section-8">
+                <h2>8. Intellectual Property & Brand Rights</h2>
+                <p>
+                    All trademarks, service marks, logos, vector trade dresses, website designs, and proprietary software interfaces displayed on <code>kvfreight.com</code> and <code>docs.kvfreight.com</code> are the exclusive property of KV Freight LLC. No entity may copy, reproduce, display, or distribute our intellectual property without express written consent.
+                </p>
+            </section>
+
+            <section id="section-9">
+                <h2>9. Disclaimer of Warranties</h2>
+                <p>
+                    Except as expressly set forth in these Terms or a signed written freight transportation agreement, our logistics services, digital portals, and websites are provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express, statutory, or implied.
+                </p>
+            </section>
+
+            <section id="section-10">
+                <h2>10. Limitation of Liability & Indemnification</h2>
+                <p>
+                    To the maximum extent permitted under applicable law:
+                </p>
+                <ul>
+                    <li><strong>Consequential Damages:</strong> In no event shall KV Freight LLC be liable for indirect, incidental, special, punitive, or consequential damages (including lost profits, factory downtime, or loss of market opportunity) arising from shipment transit delays or system disruptions.</li>
+                    <li><strong>Indemnification:</strong> Customers, shippers, and carriers agree to indemnify, defend, and hold harmless KV Freight LLC, its officers, managers, and employees from and against any third-party claims, fines, penalties, or liabilities arising out of negligence, willful misconduct, improper cargo loading, or breach of these Terms.</li>
+                </ul>
+            </section>
+
+            <section id="section-11">
+                <h2>11. Governing Law & Dispute Resolution</h2>
+                <p>
+                    These Terms, and any dispute or legal claim arising from or relating to our transportation services or digital platforms, shall be governed by and construed in accordance with the laws of the <strong>State of Minnesota</strong> and applicable federal transportation laws, without regard to conflicts of law principles.
+                </p>
+                <p>
+                    The parties consent to the exclusive jurisdiction and venue of the state courts located in <strong>Anoka County, Minnesota</strong> or the United States District Court for the District of Minnesota.
+                </p>
+            </section>
+
+            <section id="section-12">
+                <h2>12. Corporate Contact Information</h2>
+                <p>
+                    For inquiries regarding these Terms of Service or corporate freight agreements, please contact:
+                </p>
+                <div class="contact-card">
+                    <strong>KV Freight LLC — Corporate Legal & Operations</strong><br>
+                    12202 Opal Street NE<br>
+                    Blaine, MN 55449<br>
+                    United States<br><br>
+                    <strong>Telephone:</strong> 612-454-7193<br>
+                    <strong>Corporate Inquiries:</strong> <a href="mailto:contact@kvfreight.com">contact@kvfreight.com</a><br>
+                    <strong>Web Portals:</strong> <a href="https://kvfreight.com">kvfreight.com</a> | <a href="https://docs.kvfreight.com">docs.kvfreight.com</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="https://kvfreight.com">Main Website</a>
+                <a href="/verify/">Document Verification</a>
+                <a href="/privacy/">Privacy Policy</a>
+                <a href="/terms/">Terms of Service</a>
+            </div>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> KV Freight LLC. All rights reserved. <br>12202 Opal Street NE, Blaine, MN 55449</p>
+        </div>
+    </footer>
+
+</body>
+</html>
