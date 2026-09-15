@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Verification - KV Freight LLC</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --navy: #0B2347;
+            --orange: #FD5E01;
+            --bg-color: #F8F9FA;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border-color: #E2E8F0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--navy);
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 4px solid var(--orange);
+        }
+
+        header img {
+            height: 45px;
+            object-fit: contain;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 4rem 1rem;
+        }
+
+        .verification-card {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 3rem;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #E6F4EA;
+            color: #137333;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge.error {
+            background-color: #FCE8E6;
+            color: #C5221F;
+        }
+
+        .status-badge svg {
+            margin-right: 0.5rem;
+            width: 18px;
+            height: 18px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            font-size: 1.75rem;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.2;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            margin: 0 0 2.5rem 0;
+            font-size: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-value {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--navy);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            width: 100%;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+            border: 2px solid var(--navy);
+        }
+
+        .btn-download:hover {
+            background-color: white;
+            color: var(--navy);
+        }
+
+        .btn-download svg {
+            margin-right: 0.75rem;
+            width: 20px;
+            height: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            background: white;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="/logo.png" alt="KV Freight LLC">
+    </header>
+
+    <main>
+        <!-- Loading State -->
+        <div id="loadingState" class="verification-card" style="text-align: center;">
+            <p>Verifying document ID...</p>
+        </div>
+
+        <!-- Valid State -->
+        <div id="validState" class="verification-card hidden">
+            <div class="status-badge">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                VALID & AUTHENTICATED
+            </div>
+            
+            <h1>Official Employment Verification</h1>
+            <p class="subtitle">This document has been securely verified against KV Freight LLC official records.</p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Employee Name</span>
+                    <span class="info-value" id="valName">Gallad Dahir Ali</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Document Control ID</span>
+                    <span class="info-value" id="valDocId">DOC-2024-GDA01</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Date of Issue</span>
+                    <span class="info-value" id="valDate">September 15, 2026</span>
+                </div>
+            </div>
+
+            <a href="#" id="downloadLink" class="btn-download" target="_blank">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download Official PDF
+            </a>
+        </div>
+
+        <!-- Invalid State -->
+        <div id="invalidState" class="verification-card hidden" style="text-align: center;">
+            <div class="status-badge error" style="margin: 0 auto 2rem auto;">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                DOCUMENT NOT FOUND
+            </div>
+            <h1>Verification Failed</h1>
+            <p class="subtitle" style="margin-bottom: 0;">The Document Control ID provided is either invalid, expired, or does not exist in our official records. Please ensure you scanned the QR code correctly.</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; <script>document.write(new Date().getFullYear())</script> KV Freight LLC. All rights reserved. <br>
+        12202 Opal Street NE, Blaine, MN 55449
+    </footer>
+
+    <script>
+        // Fake database of valid documents
+        const documents = {
+            "DOC-2024-GDA01": {
+                name: "Gallad Dahir Ali",
+                date: "September 15, 2026",
+                file: "/DOC-2024-GDA01.pdf"
+            }
+        };
+
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const docId = urlParams.get('id');
+
+            const loading = document.getElementById('loadingState');
+            const valid = document.getElementById('validState');
+            const invalid = document.getElementById('invalidState');
+
+            setTimeout(() => {
+                loading.classList.add('hidden');
+                
+                if (docId && documents[docId]) {
+                    const doc = documents[docId];
+                    document.getElementById('valName').textContent = doc.name;
+                    document.getElementById('valDocId').textContent = docId;
+                    document.getElementById('valDate').textContent = doc.date;
+                    document.getElementById('downloadLink').href = doc.file;
+                    
+                    valid.classList.remove('hidden');
+                } else {
+                    invalid.classList.remove('hidden');
+                }
+            }, 600); // Small delay to show "verifying" state
+        }
+    </script>
+</body>
+</html>
