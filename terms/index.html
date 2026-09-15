@@ -38,49 +38,19 @@
         /* Header */
         header {
             background-color: var(--navy);
-            padding: 1.25rem 2rem;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-bottom: 4px solid var(--orange);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-link img {
-            height: 42px;
+        header img {
+            height: 45px;
             object-fit: contain;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        nav a {
-            color: #E2E8F0;
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        nav a:hover, nav a.active {
-            color: #FFFFFF;
-            font-weight: 600;
         }
 
         .btn-nav-portal {
@@ -394,18 +364,9 @@
 <body>
 
     <header>
-        <div class="header-container">
-            <a href="/" class="logo-link">
-                <img src="/logo.png" alt="KV Freight LLC">
-            </a>
-            <nav>
-                <a href="/">Docs Hub</a>
-                <a href="/verify/">Document Verification</a>
-                <a href="/privacy/">Privacy Policy</a>
-                <a href="/terms/" class="active">Terms of Service</a>
-                <a href="https://kvfreight.com" class="btn-nav-portal">Main Site &rarr;</a>
-            </nav>
-        </div>
+        <a href="/" style="display: flex; align-items: center;">
+            <img src="/logo.png" alt="KV Freight LLC">
+        </a>
     </header>
 
     <div class="doc-banner">
@@ -593,7 +554,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-links">
-                <a href="/">Docs Hub</a>
+                <a href="/">Home</a>
                 <a href="https://kvfreight.com">Main Website</a>
                 <a href="/verify/">Document Verification</a>
                 <a href="/privacy/">Privacy Policy</a>

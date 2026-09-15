@@ -28,50 +28,16 @@
 
         header {
             background-color: var(--navy);
-            padding: 1.25rem 2rem;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-bottom: 4px solid var(--orange);
         }
 
-        .header-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .logo-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-link img {
-            height: 42px;
+        header img {
+            height: 45px;
             object-fit: contain;
-        }
-
-        nav {
-            display: flex;
-            gap: 1.25rem;
-            font-size: 0.875rem;
-        }
-
-        nav a {
-            color: #E2E8F0;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        nav a:hover {
-            color: #FFFFFF;
-        }
-
-        nav a.active {
-            color: #FFFFFF;
-            font-weight: 600;
         }
 
         main {
@@ -109,25 +75,31 @@
 
         .doc-link-item {
             display: block;
-            padding: 1.25rem 0;
-            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
             text-decoration: none;
             color: var(--text-main);
-            transition: padding-left 0.2s;
+            transition: all 0.2s ease;
+            background: white;
+            position: relative;
         }
 
         .doc-link-item:last-child {
-            border-bottom: none;
+            margin-bottom: 0;
         }
 
         .doc-link-item:hover {
-            padding-left: 0.5rem;
+            border-color: var(--navy);
+            box-shadow: 0 4px 12px rgba(11, 35, 71, 0.08);
+            transform: translateY(-2px);
         }
 
         .doc-link-item h2 {
             font-size: 1.15rem;
             color: var(--navy);
-            margin: 0 0 0.25rem 0;
+            margin: 0 0 0.5rem 0;
             font-weight: 600;
             display: flex;
             align-items: center;
@@ -136,15 +108,13 @@
 
         .doc-link-item h2::after {
             content: '→';
-            color: var(--orange);
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.2s;
+            color: var(--text-muted);
+            transition: color 0.2s ease, transform 0.2s ease;
         }
 
         .doc-link-item:hover h2::after {
-            opacity: 1;
-            transform: translateX(0);
+            color: var(--orange);
+            transform: translateX(4px);
         }
 
         .doc-link-item p {
@@ -184,27 +154,15 @@
             .docs-container {
                 padding: 2rem 1.5rem;
             }
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="header-container">
-            <a href="https://kvfreight.com" class="logo-link">
-                <img src="/logo.png" alt="KV Freight LLC">
-            </a>
-            <nav>
-                <a href="https://kvfreight.com">Home</a>
-                <a href="/verify/">Verification</a>
-                <a href="/privacy/">Privacy</a>
-                <a href="/terms/">Terms</a>
-            </nav>
-        </div>
+        <a href="/" style="display: flex; align-items: center;">
+            <img src="/logo.png" alt="KV Freight LLC">
+        </a>
     </header>
 
     <main>
@@ -231,6 +189,7 @@
 
     <footer>
         <div class="footer-links">
+            <a href="/">Home</a>
             <a href="https://kvfreight.com">Main Website</a>
             <a href="/verify/">Document Verification</a>
             <a href="/privacy/">Privacy Policy</a>
