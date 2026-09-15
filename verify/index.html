@@ -46,7 +46,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 4rem 1rem;
+            padding: 3.5rem 1rem;
         }
 
         .verification-card {
@@ -55,9 +55,10 @@
             width: 100%;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            padding: 3rem;
+            padding: 2.5rem;
             box-sizing: border-box;
             border: 1px solid var(--border-color);
+            text-align: center;
         }
 
         .status-badge {
@@ -69,12 +70,17 @@
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.875rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .status-badge.error {
             background-color: #FCE8E6;
             color: #C5221F;
+        }
+
+        .status-badge.info {
+            background-color: #E8F0FE;
+            color: var(--navy);
         }
 
         .status-badge svg {
@@ -86,24 +92,109 @@
         h1 {
             font-family: 'Montserrat', sans-serif;
             color: var(--navy);
-            font-size: 1.75rem;
+            font-size: 1.65rem;
             margin: 0 0 0.5rem 0;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         p.subtitle {
             color: var(--text-muted);
-            margin: 0 0 2.5rem 0;
-            font-size: 1rem;
+            margin: 0 0 2rem 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
+        /* Search Form */
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .text-input {
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            outline: none;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .text-input:focus {
+            border-color: var(--navy);
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--navy);
+            color: white;
+            border: 2px solid var(--navy);
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn-primary:hover {
+            background-color: #06152b;
+            border-color: #06152b;
+        }
+
+        .btn-primary svg {
+            margin-right: 0.5rem;
+            width: 18px;
+            height: 18px;
+        }
+
+        .help-box {
+            background-color: #F8FAFC;
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        /* Results Display */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
             border-top: 1px solid var(--border-color);
-            padding-top: 2rem;
+            padding-top: 1.5rem;
+            text-align: left;
         }
 
         .info-item {
@@ -121,8 +212,8 @@
         }
 
         .info-value {
-            font-size: 1.125rem;
-            font-weight: 500;
+            font-size: 1.1rem;
+            font-weight: 600;
             color: var(--navy);
         }
 
@@ -133,7 +224,7 @@
             background-color: var(--navy);
             color: white;
             text-decoration: none;
-            padding: 1rem 2rem;
+            padding: 0.9rem 2rem;
             border-radius: 8px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
@@ -154,6 +245,48 @@
             height: 20px;
         }
 
+        .btn-action-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-decoration: underline;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+        }
+
+        .btn-action-link:hover {
+            color: var(--navy);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin-top: 1.5rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: white;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -166,21 +299,68 @@
         .hidden {
             display: none !important;
         }
+
+        .spinner {
+            border: 3px solid rgba(11, 35, 71, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid var(--navy);
+            width: 32px;
+            height: 32px;
+            animation: spin 0.8s linear infinite;
+            margin: 1.5rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="/logo.png" alt="KV Freight LLC">
+        <a href="https://kvfreight.com" style="display: flex; align-items: center;">
+            <img src="/logo.png" alt="KV Freight LLC">
+        </a>
     </header>
 
     <main>
-        <!-- Loading State -->
-        <div id="loadingState" class="verification-card" style="text-align: center;">
-            <p>Verifying document ID...</p>
+        <!-- State 1: Search Form (Shown when no ID is in URL or user clicks 'Verify Another') -->
+        <div id="searchState" class="verification-card">
+            <div class="status-badge info">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                OFFICIAL VERIFICATION PORTAL
+            </div>
+            
+            <h1>Document Verification</h1>
+            <p class="subtitle">Enter the Document Control ID printed on the physical document or beneath the barcode to authenticate its validity.</p>
+
+            <form class="search-form" id="searchForm" onsubmit="handleManualVerify(event)">
+                <div class="input-group">
+                    <label class="input-label" for="manualDocId">Document Control ID</label>
+                    <input type="text" id="manualDocId" class="text-input" placeholder="e.g. DOC-2024-GDA01" required autofocus autocomplete="off" autocorrect="off" autocapitalize="characters">
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    Authenticate Document
+                </button>
+            </form>
+
+            <div class="help-box">
+                <strong>Where is the Document ID?</strong><br>
+                Look at the top-right header of the document (marked <code>DOCUMENT CONTROL ID</code>) or scan the cryptographic QR code at the bottom right.
+            </div>
         </div>
 
-        <!-- Valid State -->
+        <!-- State 2: Loading Indicator -->
+        <div id="loadingState" class="verification-card hidden">
+            <div class="spinner"></div>
+            <h1 style="font-size: 1.3rem;">Authenticating Document...</h1>
+            <p class="subtitle" style="margin-bottom: 0;">Cross-referencing cryptographic ID with KV Freight official records.</p>
+        </div>
+
+        <!-- State 3: Valid Document Result -->
         <div id="validState" class="verification-card hidden">
             <div class="status-badge">
                 <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
@@ -192,16 +372,16 @@
 
             <div class="info-grid">
                 <div class="info-item">
-                    <span class="info-label">Employee Name</span>
-                    <span class="info-value" id="valName">Gallad Dahir Ali</span>
+                    <span class="info-label">Employee Full Legal Name</span>
+                    <span class="info-value" id="valName"></span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Document Control ID</span>
-                    <span class="info-value" id="valDocId">DOC-2024-GDA01</span>
+                    <span class="info-value" id="valDocId"></span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Date of Issue</span>
-                    <span class="info-value" id="valDate">September 15, 2026</span>
+                    <span class="info-value" id="valDate"></span>
                 </div>
             </div>
 
@@ -209,16 +389,24 @@
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download Official PDF
             </a>
+
+            <div>
+                <button type="button" class="btn-action-link" onclick="showSearchForm()">← Verify another document</button>
+            </div>
         </div>
 
-        <!-- Invalid State -->
-        <div id="invalidState" class="verification-card hidden" style="text-align: center;">
-            <div class="status-badge error" style="margin: 0 auto 2rem auto;">
+        <!-- State 4: Invalid Document Result -->
+        <div id="invalidState" class="verification-card hidden">
+            <div class="status-badge error">
                 <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
                 DOCUMENT NOT FOUND
             </div>
             <h1>Verification Failed</h1>
-            <p class="subtitle" style="margin-bottom: 0;">The Document Control ID provided is either invalid, expired, or does not exist in our official records. Please ensure you scanned the QR code correctly.</p>
+            <p class="subtitle">The Document Control ID <code id="invalidDocIdDisplay" style="color: #C5221F; font-weight: bold;"></code> is either invalid, expired, or does not exist in our official corporate records.</p>
+
+            <button type="button" class="btn-secondary" onclick="showSearchForm()">
+                ← Try Another Document ID
+            </button>
         </div>
     </main>
 
@@ -228,7 +416,7 @@
     </footer>
 
     <script>
-        // Fake database of valid documents
+        // Official Database of Issued Documents
         const documents = {
             "DOC-2024-GDA01": {
                 name: "Gallad Dahir Ali",
@@ -237,30 +425,76 @@
             }
         };
 
+        function hideAllStates() {
+            document.getElementById('searchState').classList.add('hidden');
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('validState').classList.add('hidden');
+            document.getElementById('invalidState').classList.add('hidden');
+        }
+
+        function showSearchForm() {
+            hideAllStates();
+            const searchState = document.getElementById('searchState');
+            searchState.classList.remove('hidden');
+            const input = document.getElementById('manualDocId');
+            input.value = '';
+            input.focus();
+            // Clean URL query parameter without reloading
+            if (window.history.pushState) {
+                const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                window.history.pushState({path: newUrl}, '', newUrl);
+            }
+        }
+
+        function verifyDocId(id) {
+            if (!id) {
+                showSearchForm();
+                return;
+            }
+
+            const cleanId = id.trim().toUpperCase();
+            hideAllStates();
+            document.getElementById('loadingState').classList.remove('hidden');
+
+            setTimeout(() => {
+                hideAllStates();
+                if (documents[cleanId]) {
+                    const doc = documents[cleanId];
+                    document.getElementById('valName').textContent = doc.name;
+                    document.getElementById('valDocId').textContent = cleanId;
+                    document.getElementById('valDate').textContent = doc.date;
+                    document.getElementById('downloadLink').href = doc.file;
+                    document.getElementById('validState').classList.remove('hidden');
+                } else {
+                    document.getElementById('invalidDocIdDisplay').textContent = cleanId || "(empty)";
+                    document.getElementById('invalidState').classList.remove('hidden');
+                }
+            }, 500);
+        }
+
+        function handleManualVerify(event) {
+            event.preventDefault();
+            const inputVal = document.getElementById('manualDocId').value;
+            if (inputVal) {
+                // Update URL query param for easy bookmarking / sharing
+                if (window.history.pushState) {
+                    const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?id=' + encodeURIComponent(inputVal.trim().toUpperCase());
+                    window.history.pushState({path: newUrl}, '', newUrl);
+                }
+                verifyDocId(inputVal);
+            }
+        }
+
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             const docId = urlParams.get('id');
 
-            const loading = document.getElementById('loadingState');
-            const valid = document.getElementById('validState');
-            const invalid = document.getElementById('invalidState');
-
-            setTimeout(() => {
-                loading.classList.add('hidden');
-                
-                if (docId && documents[docId]) {
-                    const doc = documents[docId];
-                    document.getElementById('valName').textContent = doc.name;
-                    document.getElementById('valDocId').textContent = docId;
-                    document.getElementById('valDate').textContent = doc.date;
-                    document.getElementById('downloadLink').href = doc.file;
-                    
-                    valid.classList.remove('hidden');
-                } else {
-                    invalid.classList.remove('hidden');
-                }
-            }, 600); // Small delay to show "verifying" state
-        }
+            if (docId) {
+                verifyDocId(docId);
+            } else {
+                showSearchForm();
+            }
+        };
     </script>
 </body>
 </html>
